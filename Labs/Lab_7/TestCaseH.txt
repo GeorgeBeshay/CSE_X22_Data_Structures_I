@@ -1,0 +1,7 @@
+4 4
+S...
+##.#
+#.##
+....
+// This test case has no exit node
+// Should print error.

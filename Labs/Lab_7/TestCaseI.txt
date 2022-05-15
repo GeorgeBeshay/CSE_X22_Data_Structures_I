@@ -1,0 +1,6 @@
+3 5
+.##E.
+.#..#
+...#.
+// This testcase has no Start node
+// Should print error

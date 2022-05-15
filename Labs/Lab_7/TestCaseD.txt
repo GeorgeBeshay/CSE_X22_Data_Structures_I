@@ -1,0 +1,10 @@
+6 3
+S##
+..#
+#.#
+.##
+..#
+#.E
+// This testcase should output an error message
+// because there is no path that can connect between the start 
+// and the end point

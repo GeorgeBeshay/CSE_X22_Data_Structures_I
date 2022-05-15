@@ -32,6 +32,7 @@ public class MazeSolver implements IMazeSolver{
 						array_2d[i][j] = tempS.charAt(j);
 					}
 				}
+				break;
 			}
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
@@ -123,11 +124,11 @@ public class MazeSolver implements IMazeSolver{
 				}
 			}
 		}
-		System.out.println("Error");
+		System.out.println("DFS: Error");
 		return null;
 		}
 		catch(Exception e) {
-			System.out.print("Error");
+			System.out.print("DFS: Error");
 			return null;
 
 		}
@@ -161,6 +162,7 @@ public class MazeSolver implements IMazeSolver{
 						Map[i][j] = tempS.charAt(j);
 					}
 				}
+				break;
 			}
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
@@ -170,6 +172,10 @@ public class MazeSolver implements IMazeSolver{
 		Stack myStack = new Stack();
 		Graph myGraph = new Graph(Map);
 		GraphNode temp = myGraph.getStart();
+		if(temp == null) {
+			System.out.println("BFS: Error");
+			return null;
+		}
 		
 		myQueue.enqueue(temp);
 		temp.setVisitedFlag(true);
@@ -193,6 +199,10 @@ public class MazeSolver implements IMazeSolver{
 		}
 		
 		GraphNode tempPRO = temp;
+		if(tempPRO.getObj()!='E') {
+			System.out.println("BFS: Error");
+			return null;
+		}
 		
 		while(tempPRO != null) {
 			myStack.push(new Point(tempPRO.getX(), tempPRO.getY()));
