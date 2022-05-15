@@ -11,14 +11,18 @@ public class MazeSolver implements IMazeSolver{
 		
 		Scanner sc = null;
 		String tempS;
+		String tempS1;
+		String tempS2;
 		char[][] array_2d = null;
 		int n = 0, m = 0;
 		try {
 			sc = new Scanner(maze);
 			if(sc.hasNextLine()) {
 				tempS = sc.nextLine();
-				n = Integer.parseInt(tempS.charAt(0)+"");
-				m = Integer.parseInt(tempS.charAt(2)+"");
+				tempS1 = tempS.substring(0,tempS.indexOf(' '));
+				tempS2 = tempS.substring(tempS.indexOf(' ') + 1 , tempS.length());
+				n = Integer.parseInt(tempS1);
+				m = Integer.parseInt(tempS2);
 				array_2d = new char[n][m];
 			}
 			while(sc.hasNext() && n > 0 && m > 0) {
@@ -135,14 +139,19 @@ public class MazeSolver implements IMazeSolver{
 		
 		Scanner sc = null;
 		String tempS;
+		String tempS1;
+		String tempS2;
 		char[][] Map = null;
 		int Rows = 0, Columns = 0;
 		try {
 			sc = new Scanner(maze);
 			if(sc.hasNextLine()) {
 				tempS = sc.nextLine();
-				Rows = Integer.parseInt(tempS.charAt(0)+"");
-				Columns = Integer.parseInt(tempS.charAt(2)+"");
+				tempS1 = tempS.substring(0,tempS.indexOf(' '));
+				tempS2 = tempS.substring(tempS.indexOf(' ') + 1 , tempS.length());
+				Rows = Integer.parseInt(tempS1);
+				Columns = Integer.parseInt(tempS2);
+				
 				Map = new char[Rows][Columns];
 			}
 			while(sc.hasNext() && Rows > 0 && Columns > 0) {
