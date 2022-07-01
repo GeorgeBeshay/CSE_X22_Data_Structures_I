@@ -8,7 +8,6 @@
 - Course was provided during the 4th Semester.
 - Course Code: CSE - X22
 - Code Mainly Availabe For:
-   - Projects
    - Labs
    - Sheets
    - Implementations
